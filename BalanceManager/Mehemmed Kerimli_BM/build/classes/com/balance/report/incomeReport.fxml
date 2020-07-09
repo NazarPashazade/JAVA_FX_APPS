@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="512.0" prefWidth="715.0" styleClass="body4" stylesheets="@../background/newCascadeStyleSheet1.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.balance.report.IncomeReportController">
+   <children>
+      <Label fx:id="beginDateLbl" layoutX="7.0" layoutY="15.0" prefHeight="30.0" prefWidth="150.0" text="Başlama Tarixi">
+         <font>
+            <Font name="System Bold Italic" size="20.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="0.7857142857142857" endY="0.7047619047619048" startX="0.2857142857142857" startY="0.2523809523809524">
+               <stops>
+                  <Stop color="#4800ff" />
+                  <Stop color="#ff0009" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <Label fx:id="endDateLbl" layoutX="378.0" layoutY="15.0" prefHeight="30.0" prefWidth="121.0" text="Bitmə Tarixi">
+         <font>
+            <Font name="System Bold Italic" size="20.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="0.7857142857142857" endY="0.7047619047619048" startX="0.2857142857142857" startY="0.2523809523809524">
+               <stops>
+                  <Stop color="#4800ff" />
+                  <Stop color="#ff0009" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <DatePicker fx:id="beginDateDp" layoutX="157.0" layoutY="17.0" prefHeight="25.0" prefWidth="200.0" />
+      <DatePicker fx:id="endDateDP" layoutX="505.0" layoutY="17.0" prefHeight="25.0" prefWidth="200.0" />
+      <Button fx:id="filtirBtn" layoutX="184.0" layoutY="58.0" mnemonicParsing="false" onAction="#filtirBtnOnAction" prefHeight="40.0" prefWidth="350.0" style="-fx-background-radius: 50;" text="FİLTİR ET">
+         <font>
+            <Font name="System Bold Italic" size="17.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="0.7857142857142857" endY="0.7047619047619048" startX="0.2857142857142857" startY="0.2523809523809524">
+               <stops>
+                  <Stop color="#4800ff" />
+                  <Stop color="#ff0009" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Button>
+      <TableView fx:id="incomeReportTableView" layoutX="5.0" layoutY="112.0" onMousePressed="#incomeReportTableViewOnMousePressed" prefHeight="358.0" prefWidth="704.0">
+        <columns>
+          <TableColumn fx:id="idCol" prefWidth="36.0" text="İd" />
+          <TableColumn fx:id="CategoryCol" prefWidth="241.0" text="Kateqoriya" />
+            <TableColumn fx:id="AmountCol" prefWidth="104.0" text="Məbləğ" />
+            <TableColumn fx:id="noteCol" minWidth="0.0" prefWidth="168.0" text="Qeyd" />
+            <TableColumn fx:id="reg_DateCol" prefWidth="154.0" text="Qeydiyyat Tarixi" />
+        </columns>
+      </TableView>
+      <Label fx:id="sumAmountLbl1" layoutX="216.0" layoutY="476.0" prefHeight="30.0" prefWidth="143.0" text="Ümumi Balans">
+         <font>
+            <Font name="System Bold Italic" size="20.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="0.7857142857142857" endY="0.7047619047619048" startX="0.2857142857142857" startY="0.2523809523809524">
+               <stops>
+                  <Stop color="#4800ff" />
+                  <Stop color="#ff0009" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <Label fx:id="sumAmountLbl2" layoutX="378.0" layoutY="476.0" prefHeight="30.0" prefWidth="110.0" text="0.0">
+         <font>
+            <Font name="System Bold Italic" size="20.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="0.7857142857142857" endY="0.7047619047619048" startX="0.2857142857142857" startY="0.2523809523809524">
+               <stops>
+                  <Stop color="#4800ff" />
+                  <Stop color="#ff0009" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+   </children>
+</AnchorPane>

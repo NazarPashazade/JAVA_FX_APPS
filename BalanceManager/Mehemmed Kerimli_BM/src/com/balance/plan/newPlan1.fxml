@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="535.0" prefWidth="763.0" styleClass="body2" stylesheets="@../background/newCascadeStyleSheet.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.balance.plan.NewPlanController">
+   <children>
+      <Label fx:id="planNameLbl" layoutX="80.0" layoutY="30.0" prefHeight="36.0" prefWidth="107.0" text="Plan Adı">
+         <font>
+            <Font name="System Bold Italic" size="25.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="0.7714285714285715" endY="0.6571428571428571" startX="0.30952380952380953" startY="0.1523809523809524">
+               <stops>
+                  <Stop color="#0d00ff" />
+                  <Stop color="RED" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <TextField fx:id="planNameTF" layoutX="20.0" layoutY="80.0" prefHeight="30.0" prefWidth="240.0" promptText="Plan Adı" style="-fx-background-radius: 50;" />
+      <Label fx:id="beginDateLbl" layoutX="45.0" layoutY="130.0" prefHeight="36.0" prefWidth="187.0" text="Başlanğıc Tarix">
+         <font>
+            <Font name="System Bold Italic" size="25.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="0.7714285714285715" endY="0.6571428571428571" startX="0.30952380952380953" startY="0.1523809523809524">
+               <stops>
+                  <Stop color="#0d00ff" />
+                  <Stop color="RED" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <DatePicker fx:id="beginDateDP" layoutX="20.0" layoutY="180.0" prefHeight="30.0" prefWidth="240.0" promptText="Başlanğıc Tarix" />
+      <Label fx:id="endDateLbl" layoutX="80.0" layoutY="230.0" prefHeight="36.0" prefWidth="118.0" text="Son Tarix">
+         <font>
+            <Font name="System Bold Italic" size="25.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="0.7714285714285715" endY="0.6571428571428571" startX="0.30952380952380953" startY="0.1523809523809524">
+               <stops>
+                  <Stop color="#0d00ff" />
+                  <Stop color="RED" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <DatePicker fx:id="endDateDP" layoutX="20.0" layoutY="280.0" prefHeight="30.0" prefWidth="240.0" promptText="Son Tarix" />
+      <Label fx:id="spendAmountLbl" layoutX="45.0" layoutY="330.0" prefHeight="36.0" prefWidth="187.0" text="Ayrılan Məbləğ">
+         <font>
+            <Font name="System Bold Italic" size="25.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="0.7714285714285715" endY="0.6571428571428571" startX="0.30952380952380953" startY="0.1523809523809524">
+               <stops>
+                  <Stop color="#0d00ff" />
+                  <Stop color="RED" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <TextField fx:id="amountTF" layoutX="20.0" layoutY="380.0" onKeyReleased="#amountTFOnKeyReleased" prefHeight="30.0" prefWidth="240.0" promptText="Ayrılan Məbləğ" style="-fx-background-radius: 50;" />
+      <Button fx:id="addPlanBtn" layoutX="16.0" layoutY="470.0" mnemonicParsing="false" onAction="#addPlanBtnOnAction" prefHeight="36.0" prefWidth="240.0" style="-fx-background-radius: 50;" text="Daxil Et">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="0.7714285714285715" endY="0.6571428571428571" startX="0.30952380952380953" startY="0.1523809523809524">
+               <stops>
+                  <Stop color="#0d00ff" />
+                  <Stop color="RED" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Button>
+      <ListView fx:id="expenseCategoryListView" layoutX="301.0" layoutY="53.0" onMousePressed="#expenseCategoryListViewOnMousePressed" prefHeight="427.0" prefWidth="225.0" />
+      <ListView fx:id="amountListView" layoutX="526.0" layoutY="53.0" onMousePressed="#amountListViewOnMousePressed" prefHeight="427.0" prefWidth="225.0" />
+      <Label fx:id="sumAmountLbl1" layoutX="301.0" layoutY="490.0" prefHeight="36.0" prefWidth="287.0" text="Ümumi Ayrılmış Məbləğ">
+         <font>
+            <Font name="System Bold Italic" size="25.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="0.7714285714285715" endY="0.6571428571428571" startX="0.30952380952380953" startY="0.1523809523809524">
+               <stops>
+                  <Stop color="#0d00ff" />
+                  <Stop color="RED" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <Label fx:id="sumAmountLbl2" layoutX="603.0" layoutY="490.0" prefHeight="36.0" prefWidth="98.0" text="0.0">
+         <font>
+            <Font name="System Bold Italic" size="25.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="0.7714285714285715" endY="0.6571428571428571" startX="0.30952380952380953" startY="0.1523809523809524">
+               <stops>
+                  <Stop color="#0d00ff" />
+                  <Stop color="RED" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <Label fx:id="balanceLbl1" layoutX="301.0" layoutY="12.0" prefHeight="36.0" prefWidth="83.0" text="Balans">
+         <font>
+            <Font name="System Bold Italic" size="25.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="0.7714285714285715" endY="0.6571428571428571" startX="0.30952380952380953" startY="0.1523809523809524">
+               <stops>
+                  <Stop color="#0d00ff" />
+                  <Stop color="RED" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <Label fx:id="balanceLbl2" layoutX="393.0" layoutY="12.0" prefHeight="36.0" prefWidth="337.0" text="0.0">
+         <font>
+            <Font name="System Bold Italic" size="25.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="0.7714285714285715" endY="0.6571428571428571" startX="0.30952380952380953" startY="0.1523809523809524">
+               <stops>
+                  <Stop color="#0d00ff" />
+                  <Stop color="RED" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Label>
+      <Button fx:id="cixisPlanBtn" layoutX="717.0" layoutY="2.0" mnemonicParsing="false" onAction="#cixisPlanOnAction" prefHeight="0.0" prefWidth="46.0" style="-fx-background-radius: 50;" text="ÇIXIŞ">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+         <textFill>
+            <LinearGradient endX="0.7714285714285715" endY="0.6571428571428571" startX="0.30952380952380953" startY="0.1523809523809524">
+               <stops>
+                  <Stop color="#0d00ff" />
+                  <Stop color="RED" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </Button>
+   </children>
+</AnchorPane>

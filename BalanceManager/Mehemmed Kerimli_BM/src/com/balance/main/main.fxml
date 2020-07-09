@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="707.0" prefWidth="1311.0" styleClass="body1" stylesheets="@../background/arxaFon.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.balance.main.MainController">
+   <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+   </padding>
+   <children>
+      <BorderPane prefHeight="663.0" prefWidth="1311.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <left>
+            <Accordion prefHeight="653.0" prefWidth="290.0" BorderPane.alignment="CENTER">
+              <panes>
+                <TitledPane onMouseReleased="#incomeOnMouseReleased" text="GƏLİR">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="body1" stylesheets="@../background/arxaFon.css">
+                           <children>
+                              <BorderPane prefHeight="559.0" prefWidth="288.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <center>
+                                    <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                       <children>
+                                          <ListView fx:id="incomeListView" layoutX="-8.0" layoutY="5.0" onMousePressed="#incomeListViewOnMousePressed" prefHeight="270.0" prefWidth="280.0">
+                                             <opaqueInsets>
+                                                <Insets />
+                                             </opaqueInsets>
+                                             <padding>
+                                                <Insets left="5.0" right="5.0" top="5.0" />
+                                             </padding>
+                                          </ListView>
+                                          <Button fx:id="incomeNewCategoryBtn" layoutY="335.0" mnemonicParsing="false" onAction="#incomeNewCategoryBtnOnAction" onMousePressed="#incomeNewCategoryBtnOnMousePressed" prefHeight="40.0" prefWidth="265.0" style="-fx-background-radius: 50;" text="Yeni Kateqoriya">
+                                             <font>
+                                                <Font name="System Bold Italic" size="15.0" />
+                                             </font>
+                                             <textFill>
+                                                <LinearGradient endX="0.7523809523809524" endY="0.6047619047619048" startX="0.3333333333333333" startY="0.26190476190476186">
+                                                   <stops>
+                                                      <Stop color="#3a05fc" />
+                                                      <Stop color="RED" offset="1.0" />
+                                                   </stops>
+                                                </LinearGradient>
+                                             </textFill>
+                                          </Button>
+                                          <Button fx:id="newIncomeBtn" layoutY="385.0" mnemonicParsing="false" onAction="#newIncomeBtnOnAction" onMousePressed="#newIncomeBtnOnMousePressed" prefHeight="40.0" prefWidth="265.0" style="-fx-background-radius: 50;" text="Əlavə Et">
+                                             <font>
+                                                <Font name="System Bold Italic" size="15.0" />
+                                             </font>
+                                             <textFill>
+                                                <LinearGradient endX="0.7523809523809524" endY="0.6047619047619048" startX="0.3333333333333333" startY="0.26190476190476186">
+                                                   <stops>
+                                                      <Stop color="#3a05fc" />
+                                                      <Stop color="RED" offset="1.0" />
+                                                   </stops>
+                                                </LinearGradient>
+                                             </textFill>
+                                          </Button>
+                                          <Button fx:id="updateIncomeBtn" layoutY="435.0" mnemonicParsing="false" onAction="#updateIncomeBtnOnAction" onMousePressed="#updateIncomeBtnOnMousePressed" prefHeight="40.0" prefWidth="265.0" style="-fx-background-radius: 50;" text="Yenilə">
+                                             <font>
+                                                <Font name="System Bold Italic" size="15.0" />
+                                             </font>
+                                             <textFill>
+                                                <LinearGradient endX="0.7523809523809524" endY="0.6047619047619048" startX="0.3333333333333333" startY="0.26190476190476186">
+                                                   <stops>
+                                                      <Stop color="#3a05fc" />
+                                                      <Stop color="RED" offset="1.0" />
+                                                   </stops>
+                                                </LinearGradient>
+                                             </textFill>
+                                          </Button>
+                                          <Button fx:id="deleteIncomeBtn" layoutY="485.0" mnemonicParsing="false" onAction="#deleteIncomeOnAction" onMousePressed="#deleteIncomeBtnOnMousePressed" prefHeight="40.0" prefWidth="265.0" style="-fx-background-radius: 50;" text="Sil">
+                                             <font>
+                                                <Font name="System Bold Italic" size="15.0" />
+                                             </font>
+                                             <textFill>
+                                                <LinearGradient endX="0.7523809523809524" endY="0.6047619047619048" startX="0.3333333333333333" startY="0.26190476190476186">
+                                                   <stops>
+                                                      <Stop color="#3a05fc" />
+                                                      <Stop color="RED" offset="1.0" />
+                                                   </stops>
+                                                </LinearGradient>
+                                             </textFill>
+                                          </Button>
+                                          <Button fx:id="moreInfoIncomeBtn" layoutY="535.0" mnemonicParsing="false" onAction="#moreInfoIncomeOnAction" onMousePressed="#moreInfoIncomeBtnOnMousePressed" prefHeight="40.0" prefWidth="265.0" style="-fx-background-radius: 50;" text="Ətraflı Hesabat">
+                                             <font>
+                                                <Font name="System Bold Italic" size="15.0" />
+                                             </font>
+                                             <textFill>
+                                                <LinearGradient endX="0.7523809523809524" endY="0.6047619047619048" startX="0.3333333333333333" startY="0.26190476190476186">
+                                                   <stops>
+                                                      <Stop color="#3a05fc" />
+                                                      <Stop color="RED" offset="1.0" />
+                                                   </stops>
+                                                </LinearGradient>
+                                             </textFill>
+                                          </Button>
+                                          <TextField fx:id="incomeNewCategoryTxt" layoutY="285.0" onMousePressed="#incomeNewCategoryTxtOnMousePressed" prefHeight="40.0" prefWidth="265.0" promptText="Gəlir Əlavə Edin" style="-fx-background-radius: 50;" />
+                                       </children>
+                                    </AnchorPane>
+                                 </center>
+                              </BorderPane>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                     <font>
+                        <Font name="System Bold Italic" size="15.0" />
+                     </font>
+                     <textFill>
+                        <LinearGradient endX="0.7523809523809524" endY="0.6047619047619048" startX="0.3333333333333333" startY="0.26190476190476186">
+                           <stops>
+                              <Stop color="#3a05fc" />
+                              <Stop color="RED" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                </TitledPane>
+                <TitledPane onMouseReleased="#expenseOnMouseReleased" text="XƏRC">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="body1" stylesheets="@../background/arxaFon.css">
+                           <children>
+                              <BorderPane prefHeight="603.0" prefWidth="288.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <center>
+                                    <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                       <children>
+                                          <ListView fx:id="expenseListView" layoutX="-8.0" layoutY="5.0" onMousePressed="#expenseListViewOnMousePressed" prefHeight="270.0" prefWidth="280.0">
+                                             <opaqueInsets>
+                                                <Insets />
+                                             </opaqueInsets>
+                                          </ListView>
+                                          <Button fx:id="expenseNewCategoryBtn" layoutY="335.0" mnemonicParsing="false" onAction="#expenseNewCategoryOnAction" onMousePressed="#expenseNewCategoryBtnOnMousePressed" prefHeight="40.0" prefWidth="265.0" style="-fx-background-radius: 50;" text="Yeni Kateqoriya">
+                                             <font>
+                                                <Font name="System Bold Italic" size="15.0" />
+                                             </font>
+                                             <textFill>
+                                                <LinearGradient endX="0.7523809523809524" endY="0.6047619047619048" startX="0.3333333333333333" startY="0.26190476190476186">
+                                                   <stops>
+                                                      <Stop color="#3a05fc" />
+                                                      <Stop color="RED" offset="1.0" />
+                                                   </stops>
+                                                </LinearGradient>
+                                             </textFill>
+                                             <opaqueInsets>
+                                                <Insets />
+                                             </opaqueInsets>
+                                          </Button>
+                                          <TextField fx:id="expenseNewCategoryTxt" layoutY="285.0" onMousePressed="#expenseNewCategoryTxtOnMousePressed" prefHeight="40.0" prefWidth="265.0" promptText="Xərc Əlavə Edin" style="-fx-background-radius: 50;">
+                                             <opaqueInsets>
+                                                <Insets />
+                                             </opaqueInsets>
+                                          </TextField>
+                                          <Button fx:id="newExpenseBtn" layoutY="385.0" mnemonicParsing="false" onAction="#newExpenseOnAction" onMousePressed="#newExpenseBtnOnMousePressed" prefHeight="40.0" prefWidth="265.0" style="-fx-background-radius: 50;" text="Əlavə Et">
+                                             <font>
+                                                <Font name="System Bold Italic" size="15.0" />
+                                             </font>
+                                             <textFill>
+                                                <LinearGradient endX="0.7523809523809524" endY="0.6047619047619048" startX="0.3333333333333333" startY="0.26190476190476186">
+                                                   <stops>
+                                                      <Stop color="#3a05fc" />
+                                                      <Stop color="RED" offset="1.0" />
+                                                   </stops>
+                                                </LinearGradient>
+                                             </textFill>
+                                             <opaqueInsets>
+                                                <Insets />
+                                             </opaqueInsets>
+                                             <padding>
+                                                <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button fx:id="updateExpenseBtn" layoutY="435.0" mnemonicParsing="false" onAction="#updateExpenseOnAction" onMousePressed="#updateExpenseBtnOnMousePressed" prefHeight="40.0" prefWidth="265.0" style="-fx-background-radius: 50;" text="Yenilə">
+                                             <font>
+                                                <Font name="System Bold Italic" size="15.0" />
+                                             </font>
+                                             <textFill>
+                                                <LinearGradient endX="0.7523809523809524" endY="0.6047619047619048" startX="0.3333333333333333" startY="0.26190476190476186">
+                                                   <stops>
+                                                      <Stop color="#3a05fc" />
+                                                      <Stop color="RED" offset="1.0" />
+                                                   </stops>
+                                                </LinearGradient>
+                                             </textFill>
+                                             <opaqueInsets>
+                                                <Insets />
+                                             </opaqueInsets>
+                                             <padding>
+                                                <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button fx:id="deleteExpenseBtn" layoutY="485.0" mnemonicParsing="false" onAction="#deleteExpenseOnAction" onMousePressed="#deleteExpenseBtnOnMousePressed" prefHeight="40.0" prefWidth="265.0" style="-fx-background-radius: 50;" text="Sil">
+                                             <font>
+                                                <Font name="System Bold Italic" size="15.0" />
+                                             </font>
+                                             <textFill>
+                                                <LinearGradient endX="0.7523809523809524" endY="0.6047619047619048" startX="0.3333333333333333" startY="0.26190476190476186">
+                                                   <stops>
+                                                      <Stop color="#3a05fc" />
+                                                      <Stop color="RED" offset="1.0" />
+                                                   </stops>
+                                                </LinearGradient>
+                                             </textFill>
+                                             <padding>
+                                                <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+                                             </padding>
+                                          </Button>
+                                          <Button fx:id="moreInfoExpenseBtn" layoutY="535.0" mnemonicParsing="false" onAction="#moreInfoExpenseOnAction" onMousePressed="#moreInfoExpenseBtnOnMousePressed" prefHeight="40.0" prefWidth="265.0" style="-fx-background-radius: 50;" text="Ətraflı Hesabat">
+                                             <font>
+                                                <Font name="System Bold Italic" size="15.0" />
+                                             </font>
+                                             <textFill>
+                                                <LinearGradient endX="0.7523809523809524" endY="0.6047619047619048" startX="0.3333333333333333" startY="0.26190476190476186">
+                                                   <stops>
+                                                      <Stop color="#3a05fc" />
+                                                      <Stop color="RED" offset="1.0" />
+                                                   </stops>
+                                                </LinearGradient>
+                                             </textFill>
+                                             <padding>
+                                                <Insets bottom="5.0" left="10.0" right="10.0" top="5.0" />
+                                             </padding>
+                                          </Button>
+                                       </children>
+                                    </AnchorPane>
+                                 </center>
+                              </BorderPane>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                     <font>
+                        <Font name="System Bold Italic" size="15.0" />
+                     </font>
+                     <textFill>
+                        <LinearGradient endX="0.8714285714285714" endY="0.42380952380952386" startX="0.4095238095238095">
+                           <stops>
+                              <Stop color="#3a05fc" />
+                              <Stop color="RED" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                </TitledPane>
+                <TitledPane text="PLAN">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" styleClass="body1" stylesheets="@../background/arxaFon.css">
+                           <children>
+                              <BorderPane prefHeight="598.0" prefWidth="288.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <center>
+                                    <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                                       <children>
+                                          <ListView fx:id="planListView" layoutX="-8.0" onMousePressed="#planListViewOnMousePressed" prefHeight="520.0" prefWidth="280.0" />
+                                          <Button fx:id="newPlanBtn" layoutY="530.0" mnemonicParsing="false" onAction="#newPlanOnAciton" onMousePressed="#newPlanBtnOnMousePressed" prefHeight="40.0" prefWidth="270.0" style="-fx-background-radius: 50;" text="Əlavə Et">
+                                             <font>
+                                                <Font name="System Bold Italic" size="15.0" />
+                                             </font>
+                                             <textFill>
+                                                <LinearGradient endX="0.7523809523809524" endY="0.6047619047619048" startX="0.3333333333333333" startY="0.26190476190476186">
+                                                   <stops>
+                                                      <Stop color="#3a05fc" />
+                                                      <Stop color="RED" offset="1.0" />
+                                                   </stops>
+                                                </LinearGradient>
+                                             </textFill>
+                                          </Button>
+                                       </children>
+                                    </AnchorPane>
+                                 </center>
+                              </BorderPane>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                     <font>
+                        <Font name="System Bold Italic" size="15.0" />
+                     </font>
+                     <textFill>
+                        <LinearGradient endX="0.8476190476190476" endY="0.4428571428571429" startX="0.29523809523809524">
+                           <stops>
+                              <Stop color="#3a05fc" />
+                              <Stop color="RED" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                </TitledPane>
+              </panes>
+               <opaqueInsets>
+                  <Insets bottom="5.0" left="5.0" top="5.0" />
+               </opaqueInsets>
+               <BorderPane.margin>
+                  <Insets bottom="5.0" />
+               </BorderPane.margin>
+            </Accordion>
+         </left>
+         <right>
+            <AnchorPane prefHeight="697.0" prefWidth="48.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="logOutBtn" layoutX="-1.0" layoutY="6.0" mnemonicParsing="false" onAction="#logOutBtnOnAction" prefHeight="29.0" prefWidth="55.0" style="-fx-background-radius: 50;" text="Çıxış">
+                     <font>
+                        <Font name="System Bold Italic" size="13.0" />
+                     </font>
+                     <textFill>
+                        <LinearGradient endX="0.680952380952381" endY="0.6714285714285715" startX="0.38095238095238093" startY="0.4714285714285714">
+                           <stops>
+                              <Stop color="#4400ff" />
+                              <Stop color="#ff0404" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </right>
+         <center>
+            <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane prefHeight="43.0" prefWidth="811.0">
+                     <children>
+                        <Label fx:id="balanceLbl" prefHeight="10.0" prefWidth="143.0" text="Balans :">
+                           <font>
+                              <Font name="System Bold Italic" size="36.0" />
+                           </font>
+                           <textFill>
+                              <LinearGradient endX="0.7666666666666666" endY="0.6428571428571428" startX="0.22857142857142856" startY="0.10952380952380952">
+                                 <stops>
+                                    <Stop color="#3a07db" />
+                                    <Stop color="#3a07db" offset="0.007662835249042145" />
+                                    <Stop color="#070707" offset="0.5325670498084287" />
+                                    <Stop color="#fc0000" offset="1.0" />
+                                 </stops>
+                              </LinearGradient>
+                           </textFill>
+                        </Label>
+                        <Label fx:id="balanceLbl2" layoutX="143.0" prefHeight="41.0" prefWidth="649.0" text="0.0">
+                           <font>
+                              <Font name="System Bold Italic" size="36.0" />
+                           </font>
+                           <textFill>
+                              <LinearGradient endX="0.7666666666666666" endY="0.6428571428571428" startX="0.22857142857142856" startY="0.10952380952380952">
+                                 <stops>
+                                    <Stop color="#3a07db" />
+                                    <Stop color="#3a07db" offset="0.007662835249042145" />
+                                    <Stop color="#070707" offset="0.5325670498084287" />
+                                    <Stop color="#fc0000" offset="1.0" />
+                                 </stops>
+                              </LinearGradient>
+                           </textFill>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <PieChart fx:id="reportPieChart" prefHeight="375.0" prefWidth="811.0" />
+                  <HBox prefHeight="19.0" prefWidth="932.0">
+                     <children>
+                        <Label fx:id="sumAmountLbl" prefHeight="27.0" prefWidth="100.0" text="Məbləğ">
+                           <font>
+                              <Font name="System Bold Italic" size="18.0" />
+                           </font>
+                           <textFill>
+                              <LinearGradient endX="0.7761904761904762" endY="0.7476190476190476" startX="0.20476190476190476" startY="0.08571428571428574">
+                                 <stops>
+                                    <Stop color="#4907e1" />
+                                    <Stop color="#ff0404" offset="1.0" />
+                                 </stops>
+                              </LinearGradient>
+                           </textFill>
+                        </Label>
+                        <Label fx:id="beginDateLbl" layoutX="10.0" layoutY="10.0" prefHeight="27.0" prefWidth="150.0" text="Başlama Tarixi">
+                           <font>
+                              <Font name="System Bold Italic" size="18.0" />
+                           </font>
+                           <textFill>
+                              <LinearGradient endX="0.7761904761904762" endY="0.7476190476190476" startX="0.20476190476190476" startY="0.08571428571428574">
+                                 <stops>
+                                    <Stop color="#4907e1" />
+                                    <Stop color="#ff0404" offset="1.0" />
+                                 </stops>
+                              </LinearGradient>
+                           </textFill>
+                           <HBox.margin>
+                              <Insets left="225.0" />
+                           </HBox.margin>
+                        </Label>
+                        <Label fx:id="endDateLbl" layoutX="76.0" layoutY="10.0" prefHeight="27.0" prefWidth="150.0" text="Bitmə Tarixi">
+                           <font>
+                              <Font name="System Bold Italic" size="18.0" />
+                           </font>
+                           <textFill>
+                              <LinearGradient endX="0.7761904761904762" endY="0.7476190476190476" startX="0.20476190476190476" startY="0.08571428571428574">
+                                 <stops>
+                                    <Stop color="#4907e1" />
+                                    <Stop color="#ff0404" offset="1.0" />
+                                 </stops>
+                              </LinearGradient>
+                           </textFill>
+                           <HBox.margin>
+                              <Insets left="225.0" />
+                           </HBox.margin>
+                        </Label>
+                     </children>
+                     <VBox.margin>
+                        <Insets left="5.0" />
+                     </VBox.margin>
+                  </HBox>
+                  <ListView fx:id="planReportListView" prefHeight="252.0" prefWidth="952.0">
+                     <VBox.margin>
+                        <Insets bottom="5.0" />
+                     </VBox.margin>
+                  </ListView>
+               </children>
+               <BorderPane.margin>
+                  <Insets left="5.0" />
+               </BorderPane.margin>
+            </VBox>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

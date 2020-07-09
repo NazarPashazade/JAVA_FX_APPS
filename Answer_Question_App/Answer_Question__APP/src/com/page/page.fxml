@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="393.0" prefWidth="1043.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.page.PageController">
+   <children>
+      <Label fx:id="descriptionLbl" layoutX="73.0" layoutY="82.0" prefHeight="51.0" prefWidth="418.0" text="Description  :" textFill="#e10e0e">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Button fx:id="asnwer1Btn" layoutX="73.0" layoutY="168.0" mnemonicParsing="false" onAction="#asnwer1BtnonAction" prefHeight="40.0" prefWidth="187.0" text="Answer-1" textFill="#281cd7">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="asnwer2Btn" layoutX="304.0" layoutY="168.0" mnemonicParsing="false" onAction="#asnwer2BtnonAction" prefHeight="40.0" prefWidth="187.0" text="Answer-2" textFill="#281cd7">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="asnwer4Btn" layoutX="304.0" layoutY="234.0" mnemonicParsing="false" onAction="#asnwer4BtnonAction" prefHeight="40.0" prefWidth="187.0" text="Answer-4" textFill="#281cd7">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="asnwer3Btn" layoutX="73.0" layoutY="234.0" mnemonicParsing="false" onAction="#asnwer3BtnonAction" prefHeight="40.0" prefWidth="187.0" text="Answer-3" textFill="#281cd7">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="skipBtn" layoutX="470.0" layoutY="360.0" mnemonicParsing="false" onAction="#skipBtnOnAction" prefHeight="33.0" prefWidth="123.0" style="-fx-background-color: green; -fx-text-fill: white;" text="Skip this Question ">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Label fx:id="questionCountLbl" layoutX="509.0" layoutY="328.0" text="5/10">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <Label fx:id="scoreLbl" layoutX="410.0" layoutY="29.0" prefHeight="16.0" prefWidth="99.0" text="Score : 0" textFill="#153c4a">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <PieChart fx:id="mainPieChart" layoutX="596.0" layoutY="47.0" prefHeight="382.0" prefWidth="510.0" />
+      <Button fx:id="helpMeBtn" layoutX="1000.0" layoutY="6.0" mnemonicParsing="false" onAction="#helpMeBtnOnAction" prefHeight="33.0" prefWidth="79.0" style="-fx-background-color: green; -fx-text-fill: white;" text="Help 2/4">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Label fx:id="questionAboutLbl" layoutX="53.0" layoutY="328.0" prefHeight="33.0" prefWidth="387.0" text="Help:" textFill="#2310e0">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Button fx:id="helpAboutBtn" layoutX="894.0" layoutY="6.0" mnemonicParsing="false" onAction="#helpAboutBtnBtnOnAction" prefHeight="33.0" prefWidth="99.0" style="-fx-background-color: green; -fx-text-fill: white;" text="Help About">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="nextBtn" layoutX="772.0" layoutY="6.0" mnemonicParsing="false" onAction="#nextBtnOnAction" prefHeight="33.0" prefWidth="109.0" style="-fx-background-color: blue; -fx-text-fill: white;" text="Next" textFill="#1b84b9">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
